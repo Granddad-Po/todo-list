@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@600&family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
 .App {
     width: 100vw;
@@ -16,4 +16,11 @@
     color: #fff;
     z-index: 1;
     text-align: center;
+}
+
+@media (max-width: 800px) {
+    .heading {
+        font-size: 35px;
+        margin: 15px 0;
+    }
 }

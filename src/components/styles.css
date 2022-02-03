@@ -1,0 +1,86 @@
+.input {
+    display: flex;
+    position: relative;
+    width: 90%;
+    align-items: center;
+}
+.input__box {
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px #000;
+}
+.input__box:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+.input__submit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0;
+    border: none;
+    font-size: 15px;
+    background-color: #2f74c0;
+    color: #fff;
+    transition: 0.2s all;
+    box-shadow: 0 0 10px #000;
+}
+.input__submit:hover {
+    background-color: #388ae2;
+}
+.input__submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px #000;
+}
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.todos-single {
+    display: flex;
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: linear-gradient(rgba(214, 104, 83, 0.3), rgba(214, 104, 83, 0.3)), url(https://cdn.pixabay.com/photo/2018/02/15/14/37/paper-3155438_1280.jpg);
+}
+.todos-single__text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+.todos-single__text:focus {
+    outline: none;
+}
+.todo-single__icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .todos-single {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .input {
+        width: 95%;
+    }
+    .todos {
+        width: 95%;
+    }
+    .todos-single {
+        width: 100%;
+    }
+}
