@@ -1,3 +1,7 @@
+# application link: https://granddad-po.github.io/todo-list/
+
+To end work with the input, use the enter.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
