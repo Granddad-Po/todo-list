@@ -42,6 +42,7 @@ const SingleTodo: React.FC<Props> = ({index, todo, todos, setTodos}) => {
                 <form
                     className={`todos-single ${snapshot.isDragging ? 'drag' : ''}`}
                     onSubmit={(e) => handleEdit(e, todo.id)}
+                    onBlur={(e) => handleEdit(e, todo.id)}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
@@ -56,20 +57,22 @@ const SingleTodo: React.FC<Props> = ({index, todo, todos, setTodos}) => {
                     )}
 
                     <div>
-                <span className="todo-single__icon"
-                      onClick={() => {
-                          if (!edit && !todo.isDone) {
-                              setEdit(!edit)
-                          }
-                      }}>
-                    <AiFillEdit/>
-                </span>
+                        <span className="todo-single__icon"
+                            onClick={() => {
+                                if (!edit && !todo.isDone) {
+                                    setEdit(!edit)
+                                }
+                            }}>
+                        <AiFillEdit/>
+                        </span>
+
                         <span className="todo-single__icon" onClick={() => handleDelete(todo.id)}>
-                    <AiFillDelete/>
-                </span>
+                            <AiFillDelete/>
+                        </span>
+
                         <span className="todo-single__icon" onClick={() => handleDone(todo.id)}>
-                    <MdDone/>
-                </span>
+                            <MdDone/>
+                        </span>
                     </div>
                 </form>
             )}
